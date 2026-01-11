@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/private/",
     },
-    sitemap: "https://yourdomain.com/sitemap.xml",
+    sitemap: "https://bettermail-landing.vercel.app/sitemap.xml",
   };
 }
