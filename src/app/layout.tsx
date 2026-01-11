@@ -3,6 +3,7 @@ import { Geist, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/ui/nav";
 import { Toaster } from "sonner";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist",
@@ -30,6 +31,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Toaster className="w-fit" />
+        <Analytics />
       </body>
     </html>
   );
