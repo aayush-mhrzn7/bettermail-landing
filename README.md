@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Better Mail — AI-Powered Gmail Assistant ✉️✨
 
-## Getting Started
+**Write Emails That Sound Like You. Only Better.**
 
-First, run the development server:
+Better Mail is a Chrome Extension that refines your writing from casual to professional directly inside the Gmail compose window. No more second-guessing your tone or staring at blank drafts.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+[![Install on Chrome](https://img.shields.io/badge/Chrome_Web_Store-Install-blue?logo=google-chrome&logoColor=white)](https://chrome.google.com/webstore)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 How It Works
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Better Mail lives where you work. Type your thoughts and click to transform your message in real time.
 
-## Learn More
+1. **Draft:** Type messy or quick thoughts into the Gmail compose box.
+2. **Transform:** Use the Better Mail interface to select your desired tone.
+3. **Send:** Watch your draft turn into a polished email in seconds.
 
-To learn more about Next.js, take a look at the following resources:
+## 💡 Why Better Mail?
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Write Smarter:** You are fast at thinking. We make you fast at writing.
+- **Context Aware AI:** Our model understands the conversation thread.
+- **One Click Clarity:** Fix grammar, style, and flow simultaneously.
+- **Stay in Flow:** No tab switching. It works natively inside the Gmail UI.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ✏️ Key Features
 
-## Deploy on Vercel
+- **Real Time Tone Adjustments:**
+  - 💼 **Professional:** For clients and stakeholders.
+  - 👋 **Friendly:** For teammates and peers.
+  - 🎯 **Assertive:** For clear calls to action.
+  - ✨ **Persuasive:** For sales and outreach.
+- **Smart Rewrite Suggestions:** Better phrasing that keeps messages impactful.
+- **Custom Controls:** Decide how formal or concise the rewrite should be.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛠️ Installation
+
+### For Users
+
+1. Download the extension from the Chrome Web Store.
+2. Open Gmail and click "Compose."
+3. Look for the Better Mail icon in your toolbar.
