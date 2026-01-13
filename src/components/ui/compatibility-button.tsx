@@ -2,9 +2,36 @@
 import confetti from "canvas-confetti";
 import { Button } from "./button";
 import { toast } from "sonner";
+import { useSearchParams } from "next/navigation";
+import { useState } from "react";
+import { Loader2 } from "lucide-react";
+const isChromiumBrowser = () => {
+  // @ts-ignore
+  if (navigator.userAgentData) {
+    // @ts-ignore
+    return navigator.userAgentData.brands.some((b) =>
+      b.brand.includes("Chrom")
+    );
+  }
+
+  return typeof window !== "undefined" && !!(window as any).chrome?.runtime;
+};
 
 export const CompatibiltyButton = () => {
-  const handleClick = () => {
+  const [loading, setIsLoading] = useState(false);
+  const handleClick = async () => {
+    setIsLoading(true);
+    await delay();
+    const compatible = isChromiumBrowser();
+    setIsLoading(false);
+    if (!compatible) {
+      toast("Browser not supported", {
+        description: "Please use a Chromium-based browser like Chrome or Edge.",
+        className: "font-dm-sans font-semibold",
+        descriptionClassName: "text-xs opacity-80",
+      });
+      return;
+    }
     const end = Date.now() + 2 * 1000;
     const colors = ["#a786ff", "#fd8bbc", "#eca184", "#f8deb1"];
 
@@ -17,7 +44,7 @@ export const CompatibiltyButton = () => {
         spread: 55,
         startVelocity: 60,
         origin: { x: 0, y: 0.5 },
-        colors: colors,
+        colors,
       });
       confetti({
         particleCount: 2,
@@ -25,33 +52,29 @@ export const CompatibiltyButton = () => {
         spread: 55,
         startVelocity: 60,
         origin: { x: 1, y: 0.5 },
-        colors: colors,
+        colors,
       });
-
       requestAnimationFrame(frame);
     };
-
     frame();
     toast("Browser Compatible", {
-      closeButton: true,
-      className: "font-dm-sans w-fit font-semibold",
-      description: "Your browser is compatible with better mail.",
+      description: "Your browser works perfectly with BetterMail 🚀",
+      className: "font-dm-sans font-semibold",
       descriptionClassName: "text-xs opacity-80",
-      style: {
-        "--normal-bg": "...",
-        "--normal-text":
-          "light-dark(var(--color-green-600), var(--color-green-400))",
-        "--normal-border": "...",
-      } as React.CSSProperties,
     });
   };
 
+  const delay = async () => {
+    await new Promise((res) => setTimeout(res, 2000));
+  };
   return (
     <Button
       onClick={handleClick}
-      className="my-4 w-fit font-dm-sans justify-center"
+      disabled={loading}
+      className="my-4 cursor-pointer w-fit font-dm-sans justify-center"
     >
-      Check Browser Compatibility
+      {loading ? "Checking" : "Check"} Browser Compatibility
+      {loading && <Loader2 className="animate-spin transition-all" />}
     </Button>
   );
 };
