@@ -1,5 +1,3 @@
-import ArrowIcon from "@/components/ui/arrow";
-import { Button } from "@/components/ui/button";
 import { CompatibiltyButton } from "@/components/ui/compatibility-button";
 
 const page = () => {
