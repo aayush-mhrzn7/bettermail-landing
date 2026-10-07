@@ -128,26 +128,16 @@ export function MailStage({ autoplay = false, tall = false }: { autoplay?: boole
   );
 
 
-  // Hero only: step through the tones until the viewer touches something
+  // Hero only: play one rewrite, once, then stay put
   useEffect(() => {
     if (!autoplay) return;
-    let n = 0;
-    const run = () => {
-      if (touched.current || document.hidden) return;
-      const t = TONES[n % TONES.length];
-      n++;
-      setTone(t);
-      setSubject(DRAFT.subject);
-      setBody(DRAFT.body);
-      rewrite(t, true);
-      later(() => !touched.current && apply(t), 2600);
-    };
-    const first = setTimeout(run, 1200);
-    const id = setInterval(run, 6200);
-    return () => {
-      clearTimeout(first);
-      clearInterval(id);
-    };
+    const start = setTimeout(() => {
+      if (touched.current) return;
+      setTone("professional");
+      rewrite("professional", true);
+      later(() => !touched.current && apply("professional"), 2600);
+    }, 1200);
+    return () => clearTimeout(start);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [autoplay]);
 
