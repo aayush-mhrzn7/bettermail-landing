@@ -27,7 +27,7 @@ export const CompatibiltyButton = () => {
     if (!compatible) {
       toast("Browser not supported", {
         description: "Please use a Chromium-based browser like Chrome or Edge.",
-        className: "font-dm-sans font-semibold",
+        className: "font-semibold",
         descriptionClassName: "text-xs opacity-80",
       });
       return;
@@ -58,8 +58,8 @@ export const CompatibiltyButton = () => {
     };
     frame();
     toast("Browser Compatible", {
-      description: "Your browser works perfectly with BetterMail 🚀",
-      className: "font-dm-sans font-semibold",
+      description: "Your browser works with BetterMail.",
+      className: "font-semibold",
       descriptionClassName: "text-xs opacity-80",
     });
   };
@@ -71,7 +71,8 @@ export const CompatibiltyButton = () => {
     <Button
       onClick={handleClick}
       disabled={loading}
-      className="my-4 cursor-pointer w-fit font-dm-sans justify-center"
+      variant="ghost"
+      className="btn btn-quiet press !h-12 !px-6 !text-[15px] cursor-pointer w-fit justify-center hover:!bg-transparent"
     >
       {loading ? "Checking" : "Check"} Browser Compatibility
       {loading && <Loader2 className="animate-spin transition-all" />}
