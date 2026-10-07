@@ -4,7 +4,7 @@
 
 Better Mail is a Chrome Extension that refines your writing from casual to professional directly inside the Gmail compose window. No more second-guessing your tone or staring at blank drafts.
 
-[![Install on Chrome](https://img.shields.io/badge/Chrome_Web_Store-Install-blue?logo=google-chrome&logoColor=white)](https://chrome.google.com/webstore)
+[![Install on Chrome](https://img.shields.io/badge/Chrome_Web_Store-Install-blue?logo=google-chrome&logoColor=white)](https://chromewebstore.google.com/detail/bettermail-rewrite-emails/jncbbionigkjlaodbopoflbgaigmcbbe?hl=en-GB&utm_source=ext_sidebar)
 
 ---
 
